@@ -68,10 +68,10 @@ option{
 
 
 .rock{
-    background-image:url(fist.png);
+    background-image:url(rock.png);
 }
 .paper{
-    background-image:url(hand-paper.png);
+    background-image:url(paper.png);
 }
 .scissors{
     background-image:url(scissors.png);
@@ -101,4 +101,9 @@ button{
     font-family: "Techno Race Italic Font";
     font-size: large;
     cursor: pointer;
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
 }
