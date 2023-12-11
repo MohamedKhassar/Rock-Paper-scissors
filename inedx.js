@@ -4,14 +4,20 @@ let player_score = 0;
 play_btn.addEventListener("click", () => {
   let player = document.querySelector("#player").value;
   document.querySelector(".loading").style.display = "block";
+  document.querySelector(".result").style.columnGap = "100px"
   let random = ["rock", "paper", "scissors"];
-  let game = random[Math.round(Math.random() * random.length)];
-
+  let game = [...random][Math.round(Math.random()*random.length)]
+  
   if (player !== "") {
     setTimeout(() => {
-      document.querySelector(".loading").src = "Animation.gif";
+      // document.querySelector(".loading").src = "Animation.gif";
       // document.querySelector(".loading").src=""
       document.querySelector(".loading").style.display = "none";
+      document.querySelector(".computer-result").src = `${game}.png`
+      document.querySelector(".computer-result").style.display = "block"
+      document.querySelector(".player-result").src = `${player}.png`
+      document.querySelector(".player-result").style.display = "block"
+      document.querySelector(".result").style.columnGap = "500px"
 
       if (player === "rock" && game === "paper" || player === "scissors" && game === "rock" || player === "paper" && game === "scissors") {
         computer_score++;

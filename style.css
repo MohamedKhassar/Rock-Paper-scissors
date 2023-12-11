@@ -18,11 +18,14 @@ h1{
     justify-content: space-between;
     align-items: center;
     height: 100%;
-}
-
-.computer{
     
 }
+
+body{
+    overflow: hidden;
+}
+
+
 
 select{
     font-family: "Techno Race Italic Font";
@@ -80,7 +83,7 @@ option{
 .player-game ,.computer-game{
     display: flex;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 50px;
 }
 
 
@@ -106,4 +109,13 @@ button{
 .result{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    column-gap: 
+    500px;
+    /* width: fit-content; */
+}
+
+
+.player-result,.computer-result{
+    width: 100px;
 }
