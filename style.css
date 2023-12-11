@@ -1,62 +1,63 @@
 @font-face {
-    font-family: "Techno Race Italic Font"    ;
+    font-family: "Techno Race Italic Font";
     src: url("./techno-race-italic-font/TechnoRaceItalic-eZRWe.otf");
 }
 
-h1{
+h1 {
     text-align: center;
     text-transform: capitalize;
     font-family: "Techno Race Italic Font";
 }
 
-.container{
+.container {
     margin: 20px 100px;
-    
+
 }
-.game{
+
+.game {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    
+
 }
 
-body{
+body {
     overflow: hidden;
 }
 
 
 
-select{
+select {
     font-family: "Techno Race Italic Font";
     outline: none;
     border: none;
     overflow: hidden;
-    height: fit-content;    
+    height: fit-content;
 }
 
-select option{
-    
+select option {
+
     cursor: pointer;
     margin-top: 10px;
     font-size: x-large;
-    
+
 }
 
-.player{
+.player {
     /* display: flex;
     justify-content: end;
     align-items: center; */
     /* height: max-content; */
-    
+
 }
 
 
 
-option{
+option {
     background-position: center;
     background-repeat: no-repeat;
-    background-size:contain ;
+    background-size: contain;
     padding: 20px;
     border: black solid 2px;
     border-radius: 8px;
@@ -70,30 +71,32 @@ option{
 
 
 
-.rock{
-    background-image:url(rock.png);
-}
-.paper{
-    background-image:url(paper.png);
-}
-.scissors{
-    background-image:url(scissors.png);
+.rock {
+    background-image: url(rock.png);
 }
 
-.player-game ,.computer-game{
+.paper {
+    background-image: url(paper.png);
+}
+
+.scissors {
+    background-image: url(scissors.png);
+}
+
+.player-game, .computer-game {
     display: flex;
     align-items: center;
     column-gap: 50px;
 }
 
 
-p{
+p {
     font-size: medium;
     font-family: 'Techno Race Italic Font';
 }
 
-button{
-    padding:10px 20px;
+button {
+    padding: 10px 20px;
     border: none;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -106,16 +109,16 @@ button{
     cursor: pointer;
 }
 
-.result{
+.result {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 
-    500px;
+    column-gap:
+        500px;
     /* width: fit-content; */
 }
 
 
-.player-result,.computer-result{
+.player-result, .computer-result {
     width: 100px;
 }
