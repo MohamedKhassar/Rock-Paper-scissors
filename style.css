@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "Techno Race Italic Font"    ;
+    src: url("./techno-race-italic-font/TechnoRaceItalic-eZRWe.otf");
+}
+
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Techno Race Italic Font";
+}
+
+.container{
+    margin: 20px 100px;
+    
+}
+.game{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.computer{
+    
+}
+
+select{
+    font-family: "Techno Race Italic Font";
+    outline: none;
+    border: none;
+    overflow: hidden;
+    height: fit-content;    
+}
+
+select option{
+    
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: x-large;
+    
+}
+
+.player{
+    /* display: flex;
+    justify-content: end;
+    align-items: center; */
+    /* height: max-content; */
+    
+}
+
+
+
+option{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    padding: 20px;
+    border: black solid 2px;
+    border-radius: 8px;
+    width: 30;
+    height: 30;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+
+
+.rock{
+    background-image:url(fist.png);
+}
+.paper{
+    background-image:url(hand-paper.png);
+}
+.scissors{
+    background-image:url(scissors.png);
+}
+
+.player-game ,.computer-game{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+
+p{
+    font-size: medium;
+    font-family: 'Techno Race Italic Font';
+}
+
+button{
+    padding:10px 20px;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background: #044f8dd0;
+    font-family: "Techno Race Italic Font";
+    font-size: large;
+    cursor: pointer;
+}
