@@ -5,9 +5,9 @@ play_btn.addEventListener("click", () => {
   let player = document.querySelector("#player").value;
   document.querySelector(".loading").style.display = "block";
   document.querySelector(".result").style.columnGap = "100px";
-  let random = ["rock", "paper", "scissors"];
-  let game = [...random][Math.round(Math.random() * random.length)];
-
+  let arr_game = ["rock", "paper", "scissors"];
+  let random=Math.floor(Math.random() * arr_game.length)
+  let game = [...arr_game][random];
   if (player !== "") {
     setTimeout(() => {
       // document.querySelector(".loading").src = "Animation.gif";
@@ -17,7 +17,7 @@ play_btn.addEventListener("click", () => {
       document.querySelector(".computer-result").style.display = "block";
       document.querySelector(".player-result").src = `${player}.png`;
       document.querySelector(".player-result").style.display = "block";
-      document.querySelector(".result").style.columnGap = "500px";
+      document.querySelector(".result").style.columnGap = "300px";
 
       if (
         (player === "rock" && game === "paper") ||
@@ -80,7 +80,8 @@ play_btn.addEventListener("click", () => {
         }).showToast();
       }
     }, "3000");
-  } else {
+  }
+  else {
     Toastify({
       text: "choose something",
       duration: 3000,
@@ -96,6 +97,41 @@ play_btn.addEventListener("click", () => {
       onClick: function () {}, // Callback after click
     }).showToast();
   }
+    if (player_score>5 || computer_score>5) {
+      player_score=0
+       computer_score=0
+      if (player_score>5) {
+        Toastify({
+          text: "You Win The Game",
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "green",
+          },
+          onClick: function () {}, // Callback after click
+        }).showToast();
+      }else{
+        Toastify({
+          text: "You Lose The Game",
+          duration: 3000,
+          // destination: "https://github.com/apvarun/toastify-js",
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "left", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "red",
+          },
+          onClick: function () {}, // Callback after click
+        }).showToast();
+      }
+  } 
+  
   console.log(player);
-  console.log(game);
+  console.log(random);
 });

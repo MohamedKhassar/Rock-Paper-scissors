@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Techno Race Italic Font";
-    src: url("./techno-race-italic-font/TechnoRaceItalic-eZRWe.otf");
+    src: url("./Semakin.ttf");
 }
 
 h1 {
@@ -19,6 +19,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    column-gap: 10px;
 
 }
 
@@ -113,8 +114,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap:
-        500px;
+    
     /* width: fit-content; */
 }
 
