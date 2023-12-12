@@ -130,8 +130,13 @@ play_btn.addEventListener("click", () => {
           onClick: function () {}, // Callback after click
         }).showToast();
       }
+      
   } 
   
   console.log(player);
   console.log(random);
 });
+
+
+var doc=document.querySelector("div").innerHTML
+console.log(doc);
