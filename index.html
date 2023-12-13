@@ -10,13 +10,20 @@
 
 <body>
     <div class="container">
-        <h1>jeux Pierre, Papier ou Ciseaux</h1>
-        <div class="game" on>
-            <div class="computer">
-                <div class="computer-game">
-                    <select name="" id="" multiple="multiple">
-                        <option value="rock" class="rock"></option>
-                        <option value="paper" class="paper"></option>
+        <h1>rock, paper scissor</h1>
+        <div style="display: flex;justify-content: center;">
+            <button class="start">start the game</button>
+        </div>
+        <div style="display: flex;justify-content: center;">
+            <img src="img/pngegg (1).png" alt="" style="width: 50px;margin-top: 50;display: none;" class="reset">
+        </div>
+        <div class="game-section">
+        <div class="game">
+                <div class="computer">
+                    <div class="computer-game">
+                        <select name="" id="" multiple="multiple">
+                            <option value="rock" class="rock"></option>
+                            <option value="paper" class="paper"></option>
                         <option value="scissors" class="scissors"></option>
                     </select>
                     <p id="score_computer">0</p>
@@ -24,7 +31,7 @@
             </div>
             <div class="result">
                 <img src="" alt="" class="computer-result" style="display:none;">
-                <img src="Animation.gif" alt="" class="loading" style="display:none;">
+                <img src="img/Animation.gif" alt="" class="loading" style="display:none;">
                 <img src="" alt="" class="player-result" style="display:none;">
             </div>
             <div class="player">
@@ -39,6 +46,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 

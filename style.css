@@ -18,7 +18,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height:fit-content;
     column-gap: 10px;
 
 }
@@ -73,15 +73,15 @@ option {
 
 
 .rock {
-    background-image: url(rock.png);
+    background-image: url(img/rock.png);
 }
 
 .paper {
-    background-image: url(paper.png);
+    background-image: url(img/paper.png);
 }
 
 .scissors {
-    background-image: url(scissors.png);
+    background-image: url(img/scissors.png);
 }
 
 .player-game, .computer-game {
@@ -114,11 +114,18 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     /* width: fit-content; */
 }
 
 
 .player-result, .computer-result {
     width: 100px;
+}
+
+.start {
+    background-image: url(./img/pngegg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

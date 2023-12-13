@@ -1,7 +1,24 @@
 let play_btn = document.querySelector(".play-btn");
+let btn = document.querySelector(".start");
+let gameDiv=document.querySelector(".game-section")
+let reset=document.querySelector(".reset")
 let computer_score = 0;
 let player_score = 0;
+gameDiv.style.display="none"
+
+
+
+reset.addEventListener("click",()=>{
+  location.reload();
+})
+btn.addEventListener("click",()=>{
+  btn.innerHTML="game started"
+  btn.disabled=true
+  btn.style.cursor="not-allowed"
+  gameDiv.style.display="block"
+})
 play_btn.addEventListener("click", () => {
+  reset.style.display="block"
   let player = document.querySelector("#player").value;
   document.querySelector(".loading").style.display = "block";
   document.querySelector(".result").style.columnGap = "100px";
@@ -13,9 +30,9 @@ play_btn.addEventListener("click", () => {
       // document.querySelector(".loading").src = "Animation.gif";
       // document.querySelector(".loading").src=""
       document.querySelector(".loading").style.display = "none";
-      document.querySelector(".computer-result").src = `${game}.png`;
+      document.querySelector(".computer-result").src = `img/${game}.png`;
       document.querySelector(".computer-result").style.display = "block";
-      document.querySelector(".player-result").src = `${player}.png`;
+      document.querySelector(".player-result").src = `img/${player}.png`;
       document.querySelector(".player-result").style.display = "block";
       document.querySelector(".result").style.columnGap = "300px";
 
@@ -130,13 +147,15 @@ play_btn.addEventListener("click", () => {
           onClick: function () {}, // Callback after click
         }).showToast();
       }
-      
+
   } 
   
   console.log(player);
   console.log(random);
 });
 
+var p=document.createElement("p")
+var doc=document.getElementById("score_player")
 
-var doc=document.querySelector("div").innerHTML
-console.log(doc);
+// console.log(doc);
+// document.write("dfsdf")
