@@ -31,11 +31,7 @@ play_btn.addEventListener("click", () => {
 
   // Get player's choice from input field
   let player = document.querySelector("#player").value;
-
-  // Display loading indicator
-  document.querySelector(".loading").style.display = "block";
-  document.querySelector(".result").style.columnGap = "100px";
-
+  
   // Array of possible game choices
   let arr_game = ["rock", "paper", "scissors"];
 
@@ -45,6 +41,9 @@ play_btn.addEventListener("click", () => {
 
   // Check if player has made a choice
   if (player !== "") {
+    // Display loading indicator
+  document.querySelector(".loading").style.display = "block";
+  document.querySelector(".result").style.columnGap = "100px";
     // Delayed execution to simulate computer "thinking"
     setTimeout(() => {
       // Hide loading indicator
