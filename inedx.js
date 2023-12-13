@@ -4,9 +4,9 @@ let gameDiv=document.querySelector(".game-section")
 let reset=document.querySelector(".reset")
 let computer_score = 0;
 let player_score = 0;
+
+
 gameDiv.style.display="none"
-
-
 
 reset.addEventListener("click",()=>{
   location.reload();
@@ -27,12 +27,11 @@ play_btn.addEventListener("click", () => {
   let game = [...arr_game][random];
   if (player !== "") {
     setTimeout(() => {
-      // document.querySelector(".loading").src = "Animation.gif";
-      // document.querySelector(".loading").src=""
+     
       document.querySelector(".loading").style.display = "none";
-      document.querySelector(".computer-result").src = `img/${game}.png`;
+      document.querySelector(".computer-result").src = `assets/img/${game}.png`;
       document.querySelector(".computer-result").style.display = "block";
-      document.querySelector(".player-result").src = `img/${player}.png`;
+      document.querySelector(".player-result").src = `assets/img/${player}.png`;
       document.querySelector(".player-result").style.display = "block";
       document.querySelector(".result").style.columnGap = "300px";
 

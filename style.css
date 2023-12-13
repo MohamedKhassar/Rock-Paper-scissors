@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Techno Race Italic Font";
-    src: url("./Semakin.ttf");
+    src: url("./assets/Semakin.ttf");
 }
 
 h1 {
@@ -42,15 +42,6 @@ select option {
     cursor: pointer;
     margin-top: 10px;
     font-size: x-large;
-
-}
-
-.player {
-    /* display: flex;
-    justify-content: end;
-    align-items: center; */
-    /* height: max-content; */
-
 }
 
 
@@ -73,15 +64,15 @@ option {
 
 
 .rock {
-    background-image: url(img/rock.png);
+    background-image: url(/assets/img/rock.png);
 }
 
 .paper {
-    background-image: url(img/paper.png);
+    background-image: url(/assets/img/paper.png);
 }
 
 .scissors {
-    background-image: url(img/scissors.png);
+    background-image: url(/assets/img/scissors.png);
 }
 
 .player-game, .computer-game {
@@ -115,7 +106,6 @@ button {
     justify-content: space-between;
     align-items: center;
 
-    /* width: fit-content; */
 }
 
 
@@ -124,7 +114,7 @@ button {
 }
 
 .start {
-    background-image: url(./img/pngegg.png);
+    background-image: url(/assets/img/pngegg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
