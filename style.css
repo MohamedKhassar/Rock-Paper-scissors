@@ -10,7 +10,7 @@ h1 {
 }
 
 .container {
-    margin: 20px 100px;
+    margin: 90px 100px;
 
 }
 
@@ -19,7 +19,8 @@ h1 {
     justify-content: space-between;
     align-items: center;
     height:fit-content;
-    column-gap: 10px;
+    column-gap: 100px;
+    margin-left: 100px;
 
 }
 

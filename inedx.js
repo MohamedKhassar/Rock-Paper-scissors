@@ -31,7 +31,7 @@ play_btn.addEventListener("click", () => {
 
   // Get player's choice from input field
   let player = document.querySelector("#player").value;
-  
+
   // Array of possible game choices
   let arr_game = ["rock", "paper", "scissors"];
 
@@ -42,8 +42,8 @@ play_btn.addEventListener("click", () => {
   // Check if player has made a choice
   if (player !== "") {
     // Display loading indicator
-  document.querySelector(".loading").style.display = "block";
-  document.querySelector(".result").style.columnGap = "100px";
+    document.querySelector(".loading").style.display = "block";
+    document.querySelector(".result").style.columnGap = "100px";
     // Delayed execution to simulate computer "thinking"
     setTimeout(() => {
       // Hide loading indicator
@@ -64,11 +64,7 @@ play_btn.addEventListener("click", () => {
       ) {
         computer_score++;
         document.querySelector("#score_computer").innerHTML = computer_score;
-      } else if (
-        (player === "paper" && game === "rock") ||
-        (player === "rock" && game === "scissors") ||
-        (player === "scissors" && game === "paper")
-      ) {
+      } else {
         player_score++;
         document.querySelector("#score_player").innerHTML = player_score;
       }
@@ -119,7 +115,7 @@ play_btn.addEventListener("click", () => {
           onClick: function () {},
         }).showToast();
       }
-    }, 3000);
+    }, 1500);
   } else {
     // Display Toast notification if player hasn't made a choice
     Toastify({
@@ -136,47 +132,4 @@ play_btn.addEventListener("click", () => {
       onClick: function () {},
     }).showToast();
   }
-
-  // Check if either player or computer has reached a score of 5
-  if (player_score > 5 || computer_score > 5) {
-    // Reset scores and display appropriate message
-    player_score = 0;
-    computer_score = 0;
-
-    if (player_score > 5) {
-      // Display Toast notification for winning the game
-      Toastify({
-        text: "You Win The Game",
-        duration: 3000,
-        newWindow: true,
-        close: true,
-        gravity: "top",
-        position: "center",
-        stopOnFocus: true,
-        style: {
-          background: "green",
-        },
-        onClick: function () {},
-      }).showToast();
-    } else {
-      // Display Toast notification for losing the game
-      Toastify({
-        text: "You Lose The Game",
-        duration: 3000,
-        newWindow: true,
-        close: true,
-        gravity: "top",
-        position: "left",
-        stopOnFocus: true,
-        style: {
-          background: "red",
-        },
-        onClick: function () {},
-      }).showToast();
-    }
-  }
-
-  // Debugging logs
-  console.log(player);
-  console.log(random);
 });
