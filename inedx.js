@@ -50,9 +50,13 @@ play_btn.addEventListener("click", () => {
       document.querySelector(".loading").style.display = "none";
 
       // Display computer's and player's choices
-      document.querySelector(".computer-result").src = `assets/img/${game}.png`;
+      document.querySelector(
+        ".computer-result"
+      ).src = `./assets/img/${game}.png`;
       document.querySelector(".computer-result").style.display = "block";
-      document.querySelector(".player-result").src = `assets/img/${player}.png`;
+      document.querySelector(
+        ".player-result"
+      ).src = `./assets/img/${player}.png`;
       document.querySelector(".player-result").style.display = "block";
       document.querySelector(".result").style.columnGap = "300px";
 
@@ -65,8 +69,25 @@ play_btn.addEventListener("click", () => {
         computer_score++;
         document.querySelector("#score_computer").innerHTML = computer_score;
       } else {
-        player_score++;
-        document.querySelector("#score_player").innerHTML = player_score;
+        // Display Toast notification for a draw
+        if (player === game) {
+          Toastify({
+            text: "Draw",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+              background: "red",
+            },
+            onClick: function () {},
+          }).showToast();
+        } else {
+          player_score++;
+          document.querySelector("#score_player").innerHTML = player_score;
+        }
       }
 
       // Display Toast notifications for game choices
@@ -98,23 +119,6 @@ play_btn.addEventListener("click", () => {
         },
         onClick: function () {},
       }).showToast();
-
-      // Display Toast notification for a draw
-      if (player === game) {
-        Toastify({
-          text: "Draw",
-          duration: 3000,
-          newWindow: true,
-          close: true,
-          gravity: "top",
-          position: "center",
-          stopOnFocus: true,
-          style: {
-            background: "red",
-          },
-          onClick: function () {},
-        }).showToast();
-      }
     }, 1500);
   } else {
     // Display Toast notification if player hasn't made a choice

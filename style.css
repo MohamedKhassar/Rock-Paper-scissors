@@ -65,15 +65,15 @@ option {
 
 
 .rock {
-    background-image: url(/assets/img/rock.png);
+    background-image: url("./assets/img/rock.png");
 }
 
 .paper {
-    background-image: url(/assets/img/paper.png);
+    background-image: url("./assets/img/paper.png");
 }
 
 .scissors {
-    background-image: url(/assets/img/scissors.png);
+    background-image: url("./assets/img/scissors.png");
 }
 
 .player-game, .computer-game {
@@ -115,7 +115,7 @@ button {
 }
 
 .start {
-    background-image: url(/assets/img/pngegg.png);
+    background-image: url(./assets/img/pngegg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
